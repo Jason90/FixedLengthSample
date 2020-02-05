@@ -126,7 +126,7 @@ namespace FixedLengthSample
             //string response = SocketHelper.SendMessage("127.0.0.1", 9999, request, Encoding.GetEncoding("gb18030"));
 
 
-            string request = "05333002      6442ZA0099010075905671326228090910000169   1                    0        1 S4  25628668         57915866               13811088178 qq@123.com                                               000 北京乙丙融信息技术有                                                        000000000004000000000000000F                                                 000000000000                                                                                                      00000000                                                        ";
+            string request = "05333002      6442ZA0099010075905671326228090910000169   1                    0        1 S4  25628668         57915866               13811088178 qq@123.com                                               000 北京进化科技有限公司                                                        000000000004000000000000000F                                                 000000000000                                                                                                      00000000                                                        ";
 
             string response = SocketHelper.SendMessage("130.1.9.231", 30002, request, Encoding.GetEncoding("gb18030"));
             return request;
@@ -135,7 +135,7 @@ namespace FixedLengthSample
         private static void Test3002()
         {
 
-            string request = "05333002      6442ZA0099010075905671326228090910000169   1                    0        1 S4  25628668         57915866               13811088178 qq@123.com                                               000 北京乙丙融信息技术有                                                        000000000004000000000000000F                                                 000000000000                                                                                                      00000000                                                        ";
+            string request = "05333002      6442ZA0099010075905671326228090910000169   1                    0        1 S4  25628668         57915866               13811088178 qq@123.com                                               000 北京进化科技有限公司                                                        000000000004000000000000000F                                                 000000000000                                                                                                      00000000                                                        ";
             M3002Request cup = M3002Request.FromFixedLengthString<M3002Request>(request, 4);
             string requestString = cup.ToFixedLengthString(4);
 
