@@ -13,13 +13,8 @@ namespace FixedLengthSample
         {
             //TestSocket();
             //Test4093();
-
             //Test3002();
-
             Test3072();
-
-            
-
         }
 
         private static void Test3072()
@@ -42,7 +37,7 @@ namespace FixedLengthSample
             request.REVS = "";
 
             B3072 cup = new B3072();
-            M3072Response response= cup.Query(request);
+            M3072Response response = cup.Query(request);
 
 
         }
@@ -141,10 +136,10 @@ namespace FixedLengthSample
         {
 
             string request = "05333002      6442ZA0099010075905671326228090910000169   1                    0        1 S4  25628668         57915866               13811088178 qq@123.com                                               000 北京乙丙融信息技术有                                                        000000000004000000000000000F                                                 000000000000                                                                                                      00000000                                                        ";
-             M3002Request cup = M3002Request.FromFixedLengthString<M3002Request>(request, 4);
-          string requestString= cup.ToFixedLengthString(4);
+            M3002Request cup = M3002Request.FromFixedLengthString<M3002Request>(request, 4);
+            string requestString = cup.ToFixedLengthString(4);
 
-          string response = SocketHelper.SendMessage("130.1.9.231", 30002, requestString, Encoding.GetEncoding("gb18030"));
+            string response = SocketHelper.SendMessage("130.1.9.231", 30002, requestString, Encoding.GetEncoding("gb18030"));
 
         }
     }
