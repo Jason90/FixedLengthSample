@@ -8,7 +8,7 @@ namespace FixedLengthSample
     public enum FixedLengthType
     {
         A = 1,  //Alphabet  可以包含所有字符（包括汉字）的字符串
-        N = 2,  //Numberic  数字字符串
+        N = 2,  //Numeric  数字字符串
         X = 4   //Complex   复杂类型-实体类  
     }
     public class FixedLengthAttribute : Attribute
